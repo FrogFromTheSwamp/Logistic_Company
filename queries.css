@@ -1,0 +1,315 @@
+/* ------------------------ MEDIA QUERIES ------------------------- */
+@media (max-width: 88rem) { 
+    /* 1408px */
+    html {
+        font-size: 56.25%;
+        /* 9px / 16px */
+    }
+
+    #hero-section-image img {
+        width: 55rem;
+    }
+}
+
+@media (max-width: 78rem) {
+    /* 1248px  */
+    html {
+        font-size: 50%;
+    }
+
+    /* ALL */
+    .container {
+        max-width: 1000px;
+    }
+    
+    /* STAGES OF WORK */
+    .container.stages-of-work h5 {
+        width: 1000px;
+    }
+
+    .container.stages-of-work .stages {
+        width: 1000px;
+    }
+
+
+    #secohdary-stages {
+        width: 1000px;
+    }
+
+}
+
+@media (max-width: 64rem) {
+    /* 1024 */
+
+    html {
+        font-size: 43.75%;
+        overflow-x: hidden;
+    }
+
+    /* ALL */
+    .container {
+        max-width: 800px;
+        margin: 1rem auto 4rem auto;
+    }
+
+    .hero-section {
+        margin-top: 18rem;
+    }
+    
+    /* STAGES OF WORK */
+    .container.stages-of-work h5 {
+        width: 800px;
+    }
+
+    .container.stages-of-work .stages {
+        width: 800px;
+    }
+
+
+    #secohdary-stages {
+        width: 800px;
+    }
+
+}
+
+@media (max-width: 48rem) {
+    /* 768 */
+    html {
+        font-size: 37.5%;
+    }
+
+    /* ALL */
+    .container {
+        max-width: 500px;
+        /* margin: 1rem auto 4rem auto; */
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .hero-section {
+        margin-top: 18rem;
+        flex-direction: column;
+    }
+    
+    /* STAGES OF WORK */
+    .container.stages-of-work h5 {
+        width: 500px;
+    }
+
+    .container.stages-of-work .stages {
+        border-radius: 25px;
+    }
+
+    .container.stages-of-work .stages {
+        width: 500px;
+    }
+
+
+    #secohdary-stages {
+        width: 500px;
+    }
+
+    .container.reviews .card-review {
+        padding: 30px;
+    }
+
+    footer .main-footer {
+        padding: 5rem;
+    }
+}
+
+@media (max-width: 38rem) {
+    /* 608px */
+    html {
+        font-size: 35%;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    .nav {
+        max-width: 608px;
+    }
+
+    .about-us.cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr
+    }
+    
+    .card-about-us.primary {
+        height: auto;
+        border-radius: 25px;
+        padding: 20px;
+    }
+
+    .card-services.primary {
+        border-radius: 25px;
+    }
+
+    .card-services-notes p {
+        height: 30px;
+    }
+
+    .card-services.primary .btn.btn-primary {
+        width: 135px;
+        height: 35px;
+    }
+
+    .special-offer-card {
+        background-image: url('img/cargo-sky-small.jpg');
+        height: 450px;
+        border-radius: 25px;
+    }
+
+    .special-offer-card .special-offer-card-text h5 {
+        padding: 0 3rem;
+        font-size: 2.4rem;
+    }
+
+    .special-offer-card-text {
+        margin: 5rem;
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        width: 180px;
+        height: 30px;
+    }
+
+    .special-offer-card-text p {
+        padding: 0 3rem;
+        font-size: 2.2rem;
+    }
+
+    .container.stages-of-work h5 {
+        width: 400px;
+        height: 35px;
+    }
+
+    .container.stages-of-work .stages {
+        width: 400px;
+        border-radius: 25px;
+    }
+
+
+    #secohdary-stages {
+        width: 400px;
+        height: 35px;
+    }
+
+    #hero-section-text {
+        height: 35rem;
+    }
+
+    .container.reviews .card-review {
+        padding: 20px;
+        border-radius: 25px;
+    }
+    
+    .contact-card {
+        border-radius: 25px;
+    }
+
+    footer {
+        border-radius: 25px;
+    }
+
+    .logo-md {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 28rem) {
+    /* 448 */
+    html {
+        font-size: 29%
+    }
+
+    .container {
+        max-width: 350px;
+    }
+
+    .nav {
+        max-width: 448px;   
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        width: 130px;
+        height: 20px;
+    }
+
+    #hero-section-text p {
+        font-size: 2.2rem;
+    }
+
+    .card-about-us.primary {
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .card-services.primary {
+        border-radius: 15px;
+    }
+
+    .card-services-notes p {
+        height: 20px;
+    }
+
+    .card-services.primary .btn.btn-primary {
+        width: 110px;
+        height: 20px;
+    }
+
+    .special-offer-card .special-offer-card-text h5 {
+        padding: 0 1rem;
+        font-size: 2.3rem;
+    }
+
+    .special-offer-card-text p {
+        padding: 0 1rem;
+        font-size: 2rem;
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        border: 2px solid #023047;
+    }
+
+    .container.stages-of-work h5 {
+        width: auto;
+        padding: 0 12rem;
+    }
+
+    .container.stages-of-work .stages {
+        width: auto;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    #secohdary-stages {
+        width: auto;
+        padding: 0 12rem;
+    }
+
+    .container.reviews .card-review {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .contact-card {
+        border-radius: 15px;
+    }
+
+    footer {
+        border-radius: 15px;
+    }
+
+    footer .main-footer {
+        padding: 4rem;
+    }
+
+    .logo-md {
+        width: 20rem;
+    }
+}

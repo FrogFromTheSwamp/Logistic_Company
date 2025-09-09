@@ -1,0 +1,741 @@
+/* 
+---------------- TYPOGRAFY ----------------
+FONT SIZES
+12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+
+FONT WEIGHTS
+400 / 700
+
+LINE HEIGHTS
+1.2 / 1.5
+
+LETTER SPACING
+0 / -2px / 4px
+
+FONT FAMILY
+"Alegreya Sans", sans-serif
+
+---------------- COLORS ----------------
+Основная золотая/желтая палитра
+Темное золото: #805b00
+Основное золото: #b38835
+Светлое золото: #ffc941
+Яркое золото: #ffe992
+Глубокое золото: #926b00
+
+Синяя палитра
+Самый темный синий:
+Основной синий:
+Средний синий:
+
+Светлые акцентные цвета 
+Очень светлый голубой: #d3f1ff
+Светлый небесно-голубой: #95cce7
+Белый:
+
+---------------- BORDER RADIUS ----------------
+25px / 50px
+
+---------------- SPACING SYSTEM ----------------
+5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px
+*/
+
+/* ------------------------------------ GLOBAL SYSTEM ------------------------------------ */
+
+:root {
+    /* FONT SIZE */
+    --text-sm: 1.2rem;
+    --text-base: 1.6rem;
+    --text-paragraph: 2.4rem;
+    --text-h5: 2.6rem;
+    --text-h4: 3rem;
+    --text-h3: 3.6rem;
+    --text-h2: 4.8rem;
+    --text-h1: 6.2rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* LINE HEIGHT */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+
+    /* LETTER SPACING */
+    --letter-spacing-tight: -.2rem;
+    --letter-spacing-loose: .2rem;
+
+    /* FONT FAMILY */
+    --font-family: "Alegreya Sans", sans-serif;
+
+    /* COLORS */
+    /* Основная золотая/желтая палитра (Primary Gold/Yellow Palette) */
+    --color-gold-dark: #806500;       /* Темное золото */
+    --color-gold: #b38835;            /* Основное золото */
+    --color-gold-light: #ffc941;      /* Светлое золото */
+    --color-gold-bright: #ffe992;     /* Яркое золото */
+    --color-gold-deep: #926b00;       /* Глубокое золото */
+
+    /* Синяя палитра (Blue Palette) */
+    --color-blue-dark: #023047;       /* Самый темный синий */
+    --color-blue: #194058;            /* Основной синий */
+    --color-blue-mid: rgb(54, 89, 115);        /* Средний синий */
+
+    /* Светлые акцентные цвета (Light Accent Colors) */
+    --color-air: #F0F6F9;             /* Очень светлый голубой */
+    --color-sky-light: rgb(149, 204, 231);       /* Светлый небесно-голубой */
+    --color-white: #FFFFFF; 
+
+    --color-accent-dark: #806500;     /* Темное золото (для текста на светлом фоне) */
+    --color-accent: #AC7D28;          /* Основное золото (кнопки, важные акценты) */
+    --color-accent-light: #D4AF37;    /* Светлое золото (иконки, ховеры) */
+    --color-accent-bright: #F1D57E;   /* Яркое золото (светлые акценты, подсветка) */
+
+    --color-text: #2A363B;
+
+
+    --nav-height: 14rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 13rem;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+    color: var(--color-blue-dark);
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: var(--text-h1);
+    letter-spacing: var(--letter-spacing-loose);
+}
+
+h2 {
+    font-size: var(--text-h2);
+}
+
+h3 {
+    font-size: var(--text-h3);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    font-size: var(--text-h4);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h5 {
+    font-size: var(--text-h5);
+}
+
+p {
+    font-size: var(--text-paragraph);
+    line-height: var(--line-height-tight);
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--text-base);
+    display: inline-block;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+span {
+    display: inline-block;
+}
+
+.small-text {
+    font-size: var(--text-sm);
+}
+
+/* ------------------------------------ COMPONENTS ------------------------------------ */
+.btn {
+    font-size: var(--text-base);
+    text-decoration: none;
+    padding: .5rem 3rem;
+    border-radius: 25px;
+}
+/* ----- BTN-PRIMARY ----- */
+.btn-primary:link, .btn-primary:visited {
+    color: var(--color-white);
+    background-color: var(--color-blue-dark);
+    border: 1px solid var(--color-blue-dark);
+}
+
+.btn-primary:hover, .btn-primary:active {
+    color: var(--color-white);
+    background-color: var(--color-blue-mid);
+    border: 1px solid var(--color-blue-mid);
+}
+
+/* ----- BTN-PRIMARY-OUTLINE ----- */
+.btn-primary-outline:link, .btn-primary-outline:visited {
+    color: var(--color-blue-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-blue-dark);
+}
+
+.btn-primary-outline:hover, .btn-primary-outline:active {
+    color: var(--color-blue-mid);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-blue-mid);
+}
+
+/* ----- BTN-SECONDARY ----- */
+.btn-secondary:link, .btn-secondary:visited {
+    color: var(--color-white);
+    background-color: #D8A950;
+    border: 1px solid #AC7B28;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.btn-secondary:hover, .btn-secondary:active {
+    color: var(--color-white);
+    background-color: #AC7B28;
+    border: 1px solid #AC7B28;
+}
+
+/* ----- BTN-SECONDARY-OUTLINE ----- */
+.btn-secondary-outline:link, .btn-secondary-outline:visited {
+    color: var(--color-gold-dark);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gold-dark);
+}
+
+.btn-secondary-outline:hover, .btn-secondary-outline:active {
+    color: var(--color-gold-deep);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gold-deep);
+}
+
+.logo-md {
+    width: 35rem;
+}
+
+.logo-sm {
+    width: 15rem;
+}
+
+.big-text {
+    font-size: 2.6rem;
+    font-weight: 800;
+}
+
+.header-section {
+    font-size: var(--text-h4);
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 0.5rem;
+    font-weight: 800;
+
+}
+
+/* ------------------------------------ SECTIONS ------------------------------------ */
+
+/* ------------------- HEADER (NAVBAR + HERO SECTION) ------------------- */
+
+.header {
+    height: 100vh;
+    min-height: 800px;
+    width: 100%;
+}
+
+/* ----- NAVBAR ----- */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 15rem;
+
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0  0 25px 25px ;
+    z-index: 1000;
+
+    background-color: var(--color-white); 
+    box-shadow: 0 2px 10px rgba(54, 89, 115, 0.5); 
+}
+
+.nav-list {
+    gap: 3.5rem;
+    display: flex;
+}
+
+
+.nav-list li a:hover {
+    color: var(--color-blue-mid);
+}
+
+.nav-social-icon li a:hover {
+    color: var(--color-blue-mid);
+}
+
+.nav-social-icon {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-social-icon a {
+    font-size: var(--text-h3);
+    color: var(--color-blue-dark);
+}
+
+.nav-item {
+    font-size: var(--text-h5);
+    color: var(--color-blue-dark);
+    font-weight: var(--font-weight-bold);
+}
+
+.nav-socila-icon .fa-brands.fa-telegram {
+    color: var(--color-blue-dark);
+
+} 
+
+/* ----- HERO SECTION ----- */
+.hero-section {
+    min-height: 40rem;
+    margin-top: 18rem;
+    margin-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#hero-section-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-section-image img{
+    width: 58rem;
+    border-radius: 25px 50px;
+}
+
+#hero-section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+    justify-content: space-between;
+}
+
+#hero-section-text h1 {
+    font-weight: 800;
+}
+
+#hero-section-text h4 {
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 0.5rem;
+    letter-spacing: -0.1rem;
+}
+
+#hero-section-text p {
+    text-align: center;
+    line-height: var(--line-height-tight);
+}
+
+#hero-section-text h1 {
+    background-image: linear-gradient(to right, #F1D57E, #AC7D28);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ------------------- MAIN (ABOUT US) ------------------- */
+
+.container.about-us {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header-about-us h4 {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 800;
+}
+
+.about-us.cards {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-items: center;
+
+}
+
+.card-about-us.primary {
+    height: 200px;
+    background-color: var(--color-air);
+    border: 3px solid rgba(54, 89, 115, 0.8);
+    padding: 3rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.card-about-us h5 {
+    letter-spacing: 0.01rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+/* ------------------- MAIN (SERVICES) ------------------- */
+
+.container.services {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.services h4 {
+    padding: 0 10rem;
+    margin-bottom: 3rem;
+}
+
+.card-services.primary {
+    height: auto;
+    padding-bottom: 3rem;
+    background-color: rgba(149, 204, 231, 0.7);
+    border-radius: 50px;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card-services-notes {
+    margin: 3rem 3rem 4rem 3rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.card-services-notes p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    padding: 1rem 2rem;
+    background-color: var(--color-white);
+    border-radius: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-services.primary h5 {
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 0 3rem;
+    margin-bottom: 1rem;
+}
+
+.card-services.primary .notes-paragraph {
+    text-align: left;
+    font-size: var(--text-h5);
+    padding: 0 4.5rem 0 3rem;
+    margin-bottom: 6rem;
+}
+
+.card-services.primary .btn.btn-primary {
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--text-paragraph);
+}
+
+.special-offer-card {
+    width: 100%;
+    height: 675px;
+    background-image: url('img/cargo-sky.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.special-offer-card-text {
+    margin: 6rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-offer-card .special-offer-card-text h5 {
+    letter-spacing: -0.1rem;
+    font-size: var(--text-h4);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.special-offer-card-text p {
+    font-size: var(--text-h5);
+    text-align: center;
+    padding: 0 7rem; 
+
+}
+
+.special-offer-card-text .btn.btn-primary-outline {
+    width: 270px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-blue-dark);
+    font-size: var(--text-h5);
+    font-weight: 700;
+    background-color: transparent;
+    margin-top: 3rem;
+}
+
+/* ------------------- MAIN (STAGES OF WORK) ------------------- */
+
+.container.stages-of-work {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.container.stages-of-work h4 {
+    margin-bottom: 1rem;
+}
+
+.container.stages-of-work p {
+    font-size: var(--text-h5);
+}
+
+.container.stages-of-work h5 {
+    width: 1200px;
+    height: 60px;
+    border: 3px solid var(--color-blue-dark);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.container.stages-of-work .stages {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color:  rgba(149, 204, 231, 0.3);
+    border-radius: 50px;
+    padding: 3.5rem 9rem 3.5rem 3.5rem;
+}
+
+.stages {
+    line-height: var(--line-height-normal);
+}
+
+#secohdary-stages {
+    width: 1200px;
+    height: 60px;
+    background-color: var(--color-blue-mid);
+    border: none;
+    color: var(--color-white);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* ------------------- MAIN (REVIEWS) ------------------- */
+
+.container.reviews {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem
+}
+
+.card-review p {
+    padding: 2rem 1rem;
+}
+
+.container.reviews .card-review {
+    /* width: 1200px; */
+    background-color: rgba(255, 233, 146, 0.14);
+    border: 3px solid rgba(111, 94, 44, 0.5);
+    border-radius: 50px;
+    color: var(--color-gold-dark);
+    padding: 45px 20px 40px 45px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.container.reviews .card-review .review-heading {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container.reviews .card-review .review-heading i {
+    color: var(--color-gold-dark);
+    font-size: var(--text-h2);
+}
+
+.container.reviews .card-review .review-heading h5 {
+    color: var(--color-gold-dark);
+}
+
+/* ------------------- MAIN (CONTACTS) ------------------- */
+
+.container.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.contact-card {
+    background-color: rgba(149, 204, 231, 0.3);
+    border: 3px solid var(--color-blue-mid);
+    border-radius: 50px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-card h4 {
+    margin-bottom: 1rem;
+}
+
+.container.contacts p {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.icons-contact {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.icon-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-contact i {
+    font-size: var(--text-h1);
+    color: var(--color-blue-mid);
+}
+
+.icon-contact i:hover {
+    color: var(--color-blue);
+}
+
+/* ------------------- FOOTER ------------------- */
+
+footer {
+    height: auto;
+    background-color: var(--color-blue-dark);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 4rem;
+}
+
+footer .main-footer .text-main-footer, footer .main-footer .text-main-footer h5 {
+    color: var(--color-white);
+}
+
+footer .main-footer .text-main-footer h5 {
+    margin-bottom: 1rem;
+    letter-spacing: -0.1rem;
+}
+
+footer .main-footer .text-main-footer #adress {
+    margin-bottom: 2rem;
+}
+
+footer .main-footer .text-main-footer #mail {
+    margin-bottom: 1rem;
+}
