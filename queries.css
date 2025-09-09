@@ -43,11 +43,12 @@
 
     html {
         font-size: 43.75%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     /* ALL */
     .container {
+        width: 90%;
         max-width: 800px;
         margin: 1rem auto 4rem auto;
     }
@@ -58,16 +59,19 @@
     
     /* STAGES OF WORK */
     .container.stages-of-work h5 {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
     }
 
     .container.stages-of-work .stages {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
     }
 
 
     #secohdary-stages {
-        width: 800px;
+       width: 100%;
+        max-width: 800px;
     }
 
 }
