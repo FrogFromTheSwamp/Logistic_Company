@@ -82,9 +82,6 @@
         max-width: 500px;
     }
 
-        /* ----- мобильное поведение навигации ----- */
-
-    /* показываем label (бургер) */
     .nav-toggle-label {
         display: flex;
         width: 4.6rem;
@@ -94,20 +91,18 @@
         justify-content: center;
         background: transparent;
         margin: 0;
-        z-index: 1200; /* над меню */
+        z-index: 1200;
     }
 
-    /* прячем крестик по умолчанию */
     .nav-toggle-label .fa-xmark {
         display: none;
     }
 
-    /* порядок элементов в навбаре: бургер -> логотип -> соц.иконки */
     .nav { 
         justify-content: space-between;
-        padding: .6rem 5rem; }
+        padding: .6rem 5rem; 
+    }
 
-    /* задаём порядок (только для мобильной версии) */
     .nav-toggle-label { 
         order: 1; 
     }
@@ -119,7 +114,6 @@
         order: 3; 
     }
 
-    /* меню как блок, выезжающий вниз из-под шапки */
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -127,18 +121,15 @@
         width: 100%;
         background: var(--color-white);
         overflow: hidden;
-        max-height: 0;                     /* скрыто */
-        transition: max-height .35s ease;  /* плавное открытие */
+        max-height: 0;                   
+        transition: max-height .35s ease;  
         z-index: 1100;
         border-radius: 0 0 16px 16px;
 
-        box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.15); /* снизу */
-        /* плюс боковые */
-        box-shadow: -4px 4px 6px -4px rgba(0, 0, 0, 0.15),  /* слева */
-            4px 4px 6px -4px rgba(0, 0, 0, 0.15);  /* справа */
+        box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.15); 
+        box-shadow: -4px 4px 6px -4px rgba(0, 0, 0, 0.15), 4px 4px 6px -4px rgba(0, 0, 0, 0.15);
     }
 
-    /* внутри меню — вертикальный список */
     .nav-menu .nav-list {
         display: flex;
         flex-direction: column;
@@ -146,7 +137,6 @@
         padding: 0;
     }
 
-    /* стиль ссылок в мобильном меню (растянуты на всю ширину) */
     .nav-menu .nav-list li a {
         display: block;
         padding: 1.15rem 1.6rem;
@@ -155,25 +145,22 @@
         color: var(--color-blue-dark);
     }
 
-    /* при наведении/фокусе можно менять цвет */
     .nav-menu .nav-list li a:hover,
     .nav-menu .nav-list li a:focus {
         color: var(--color-blue-mid);
         background: rgba(0,0,0,0.02);
     }
 
-    /* --- когда чекбокс отмечен: открываем меню и меняем иконку --- */
     .nav-toggle:checked + .nav-toggle-label .fa-bars {
-        display: none;            /* прячем полоски */
-    }
-    .nav-toggle:checked + .nav-toggle-label .fa-xmark {
-        display: inline-block;    /* показываем крестик */
+        display: none;      
     }
 
-    /* открываем панель меню (подберите max-height под кол-во пунктов) */
-    .nav-toggle:checked ~ .nav-menu {
-        max-height: 40rem; /* достаточно большое значение — меню поместится */
+    .nav-toggle:checked + .nav-toggle-label .fa-xmark {
+        display: inline-block; 
     }
+
+    .nav-toggle:checked ~ .nav-menu {
+        max-height: 40rem; 
     }
 
     .nav {
@@ -248,8 +235,7 @@
     footer .main-footer {
         padding: 5rem;
     }
-
-
+}
 @media (max-width: 38rem) {
     /* 608px */
     html {
@@ -326,6 +312,7 @@
         height: auto;
         padding: 0;
     }
+
     .container.reviews .card-review {
         padding: 20px;
         border-radius: 25px;
