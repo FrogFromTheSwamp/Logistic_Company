@@ -119,9 +119,7 @@ body {
 .container {
     max-width: 1200px;
     width: 90%;
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 8rem;
+    margin: 2rem auto 8rem auto;
 }
 
 h1, h2, h3, h4, h5 {
@@ -259,18 +257,11 @@ span {
     text-align: center;
     word-spacing: 0.5rem;
     font-weight: 800;
-
 }
 
 /* ------------------------------------ SECTIONS ------------------------------------ */
 
 /* ------------------- HEADER (NAVBAR + HERO SECTION) ------------------- */
-
-.header {
-    height: 100vh;
-    min-height: 800px;
-    width: 100%;
-}
 
 /* ----- NAVBAR ----- */
 .nav {
@@ -291,7 +282,7 @@ span {
 }
 
 .nav-list {
-    gap: 3.5rem;
+    gap: 2.3rem;
     display: flex;
 }
 
@@ -306,7 +297,7 @@ span {
 
 .nav-social-icon {
     display: flex;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 .nav-social-icon a {
@@ -329,48 +320,53 @@ span {
 .hero-section {
     min-height: 40rem;
     margin-top: 18rem;
-    margin-bottom: 8rem;
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-#hero-section-image {
+.hero-section-image {
+    max-width: 55rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#hero-section-image img{
-    width: 58rem;
+.hero-section-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 25px 50px;
 }
 
-#hero-section-text {
+.hero-section-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40rem;
-    justify-content: space-between;
+    /* max-height: 40rem;
+    min-height: auto; */
+    justify-content: center;
+    gap: 1rem;
+    flex: 1;
 }
 
-#hero-section-text h1 {
-    font-weight: 800;
-}
-
-#hero-section-text h4 {
+.hero-section-text h4 {
     text-transform: uppercase;
     text-align: center;
     word-spacing: 0.5rem;
     letter-spacing: -0.1rem;
+    margin-bottom: 0.5rem;
 }
 
-#hero-section-text p {
+.hero-section-text p {
     text-align: center;
     line-height: var(--line-height-tight);
+    margin-bottom: 0.5rem;
 }
 
-#hero-section-text h1 {
+.hero-section-text h1 {
+    margin-bottom: 1rem;
+    font-weight: 800;
     background-image: linear-gradient(to right, #F1D57E, #AC7D28);
     -webkit-background-clip: text;
     background-clip: text;
@@ -387,13 +383,6 @@ span {
     align-items: center;
     justify-content: center;
     gap: 3rem;
-}
-
-.header-about-us h4 {
-    width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 800;
 }
 
 .about-us.cards {
@@ -419,7 +408,6 @@ span {
 }
 
 .card-about-us h5 {
-    letter-spacing: 0.01rem;
     font-size: 2.2rem;
     font-weight: 500;
 }
@@ -460,7 +448,7 @@ span {
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 40px;
+    height: auto;
     padding: 1rem 2rem;
     background-color: var(--color-white);
     border-radius: 25px;
@@ -480,12 +468,13 @@ span {
     text-align: left;
     font-size: var(--text-h5);
     padding: 0 4.5rem 0 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4.5rem;
 }
 
 .card-services.primary .btn.btn-primary {
-    width: 250px;
-    height: 50px;
+    align-self: flex-start;
+    width: auto;
+    height: auto;
     border-radius: 25px;
     margin-left: 3rem;
     display: flex;
@@ -497,7 +486,7 @@ span {
 
 .special-offer-card {
     width: 100%;
-    height: 675px;
+    height: 67.5rem;
     background-image: url('img/cargo-sky.jpg');
     background-size: cover; 
     background-position: center;
@@ -529,12 +518,11 @@ span {
     font-size: var(--text-h5);
     text-align: center;
     padding: 0 7rem; 
-
 }
 
 .special-offer-card-text .btn.btn-primary-outline {
-    width: 270px;
-    height: 50px;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,19 +552,9 @@ span {
     font-size: var(--text-h5);
 }
 
-.container.stages-of-work h5 {
-    width: 1200px;
-    height: 60px;
-    border: 3px solid var(--color-blue-dark);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
 .container.stages-of-work .stages {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: flex-start;
@@ -590,12 +568,12 @@ span {
     line-height: var(--line-height-normal);
 }
 
-#secohdary-stages {
-    width: 1200px;
-    height: 60px;
-    background-color: var(--color-blue-mid);
-    border: none;
-    color: var(--color-white);
+.secondary-stages {
+    padding: 1rem 0;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    border: 3px solid var(--color-blue-dark);
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -622,7 +600,9 @@ span {
 }
 
 .container.reviews .card-review {
-    /* width: 1200px; */
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
     background-color: rgba(255, 233, 146, 0.14);
     border: 3px solid rgba(111, 94, 44, 0.5);
     border-radius: 50px;
@@ -633,7 +613,6 @@ span {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
 }
 
 .container.reviews .card-review .review-heading {
@@ -663,10 +642,13 @@ span {
 }
 
 .contact-card {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
     background-color: rgba(149, 204, 231, 0.3);
     border: 3px solid var(--color-blue-mid);
     border-radius: 50px;
-    padding: 5rem;
+    padding: 5rem 5rem 4rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -682,6 +664,15 @@ span {
     text-align: center;
     font-size: 2.4rem;
 }
+
+.contact-card .contact-esse {
+    margin-bottom: 2rem;
+}
+
+.contact-card .contact-number:hover {
+    color: var(--color-blue);
+}
+
 
 .icons-contact {
     margin-top: 1rem;

@@ -79,13 +79,11 @@
 @media (max-width: 48rem) {
     /* 768 */
     html {
-        font-size: 37.5%;
+        font-size: 38%;
     }
 
-    /* ALL */
     .container {
         max-width: 500px;
-        /* margin: 1rem auto 4rem auto; */
     }
 
     .nav-list {
@@ -93,30 +91,63 @@
     }
 
     .hero-section {
-        margin-top: 18rem;
         flex-direction: column;
     }
     
-    /* STAGES OF WORK */
+    .card-about-us.primary {
+        height: auto;
+        padding: 2.5rem;
+        border-radius: 30px;
+    }
+
+    .card-services.primary {
+        border-radius: 30px
+    
+    }
+
+    .special-offer-card {
+        border-radius: 30px;
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        margin-top: 1.5rem;
+    }
+
+    .special-offer-card-text {
+        margin: 4rem 10rem ;
+    }
+
+    .special-offer-card-text p {
+        padding: 0;
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        border: 2px solid var(--color-blue-dark);
+    }
+
+    .container.stages-of-work .stages-of-work-notes {
+        text-align: center;
+    }
+
     .container.stages-of-work h5 {
-        width: 500px;
+        border: 2px solid var(--color-blue-dark);
     }
 
     .container.stages-of-work .stages {
         border-radius: 25px;
     }
 
-    .container.stages-of-work .stages {
-        width: 500px;
-    }
-
-
-    #secohdary-stages {
-        width: 500px;
-    }
-
     .container.reviews .card-review {
-        padding: 30px;
+        padding: 3rem;
+        border-radius: 30px;
+    }
+
+    .contact-card {
+        border-radius: 30px;
+    }
+
+    footer {
+        border-radius: 30px;
     }
 
     footer .main-footer {
@@ -127,15 +158,17 @@
 @media (max-width: 38rem) {
     /* 608px */
     html {
-        font-size: 35%;
+        font-size: 36%;
     }
 
     .container {
-        max-width: 400px;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .nav {
         max-width: 608px;
+        width: 100%;
     }
 
     .about-us.cards {
@@ -153,18 +186,7 @@
         border-radius: 25px;
     }
 
-    .card-services-notes p {
-        height: 30px;
-    }
-
-    .card-services.primary .btn.btn-primary {
-        width: 135px;
-        height: 35px;
-    }
-
     .special-offer-card {
-        background-image: url('img/cargo-sky-small.jpg');
-        height: 450px;
         border-radius: 25px;
     }
 
@@ -177,9 +199,9 @@
         margin: 5rem;
     }
 
+
     .special-offer-card-text .btn.btn-primary-outline {
-        width: 180px;
-        height: 30px;
+        margin-top: 4rem;
     }
 
     .special-offer-card-text p {
@@ -187,26 +209,14 @@
         font-size: 2.2rem;
     }
 
-    .container.stages-of-work h5 {
-        width: 400px;
-        height: 35px;
-    }
-
     .container.stages-of-work .stages {
-        width: 400px;
         border-radius: 25px;
     }
 
-
-    #secohdary-stages {
-        width: 400px;
-        height: 35px;
+    .container.stages-of-work h5 {
+        width: 100%;
+        height: auto;
     }
-
-    #hero-section-text {
-        height: 35rem;
-    }
-
     .container.reviews .card-review {
         padding: 20px;
         border-radius: 25px;
@@ -228,24 +238,17 @@
 @media (max-width: 28rem) {
     /* 448 */
     html {
-        font-size: 29%
+        font-size: 34%
     }
 
     .container {
-        max-width: 350px;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .nav {
-        max-width: 448px;   
-    }
-
-    .special-offer-card-text .btn.btn-primary-outline {
-        width: 130px;
-        height: 20px;
-    }
-
-    #hero-section-text p {
-        font-size: 2.2rem;
+        max-width: 448px; 
+        width: 100%;  
     }
 
     .card-about-us.primary {
@@ -257,31 +260,14 @@
         border-radius: 15px;
     }
 
-    .card-services-notes p {
-        height: 20px;
-    }
-
-    .card-services.primary .btn.btn-primary {
-        width: 110px;
-        height: 20px;
-    }
-
-    .special-offer-card .special-offer-card-text h5 {
-        padding: 0 1rem;
-        font-size: 2.3rem;
-    }
-
-    .special-offer-card-text p {
-        padding: 0 1rem;
-        font-size: 2rem;
-    }
-
     .special-offer-card-text .btn.btn-primary-outline {
+        margin-top: 2rem;
         border: 2px solid #023047;
     }
 
     .container.stages-of-work h5 {
-        width: auto;
+        width: 100%;
+        height: auto;
         padding: 0 12rem;
     }
 
@@ -314,6 +300,20 @@
     }
 
     .logo-md {
-        width: 20rem;
+        width: 19rem;
+    }
+}
+
+@media (max-width: 22rem) {
+    html {
+        font-size: 32%;
+    }
+
+    .special-offer-card .special-offer-card-text h5 {
+        padding: 0;
+    }
+
+    .special-offer-card-text .btn.btn-primary-outline {
+        margin-top: 1rem;
     }
 }
