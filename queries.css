@@ -191,7 +191,11 @@
     }
 
     .card-services-notes {
-        gap: 1rem;
+        justify-content: flex-start;
+    }
+
+    .card-services-notes p {
+        padding: 1rem;
     }
 
     .special-offer-card {
