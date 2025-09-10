@@ -228,6 +228,14 @@
         border-radius: 30px;
     }
 
+    .contact-card .contact-esse {
+        margin-bottom: 1rem;
+    }
+
+    .container.contacts .contact-number.big-text {
+        font-size: 2.6rem;
+    }
+
     footer {
         border-radius: 30px;
     }
