@@ -244,6 +244,7 @@ span {
 
 .logo-sm {
     width: 15rem;
+
 }
 
 .big-text {
@@ -284,6 +285,7 @@ span {
 .nav-list {
     gap: 2.3rem;
     display: flex;
+    order: 2;
 }
 
 
@@ -298,6 +300,7 @@ span {
 .nav-social-icon {
     display: flex;
     gap: 1rem;
+    order: 3;
 }
 
 .nav-social-icon a {
@@ -315,6 +318,53 @@ span {
     color: var(--color-blue-dark);
 
 } 
+
+/* ----- BURGER MENU ----- */
+
+/* скрытый чекбокс (визуально скрываем, но оставляем в DOM для управления) */
+.nav-toggle {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* кнопка-бургер (label) — по умолчанию скрыта, покажем в медиазапросе */
+.nav-toggle-label {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* иконки внутри label */
+.nav-toggle-label i {
+  font-size: 3.2rem; /* можно подогнать */
+  line-height: 1;
+  display: inline-block;
+  pointer-events: none;
+  color: var(--color-blue-dark);
+}
+
+/* по умолчанию показываем только bars; крестик скрыт */
+.nav-toggle-label .fa-xmark {
+  display: none;
+}
+
+/* контейнер меню (на десктопе показывает горизонтальные ссылки, в мобилке — будет падать вниз) */
+.nav-menu {
+  display: block; /* на десктопе будет просто контейнер */
+}
+
+/* гарантируем, что внутри nav-menu nav-list по умолчанию горизонтален */
+.nav-menu .nav-list {
+  display: flex;
+  gap: 2.3rem;
+  align-items: center;
+}
 
 /* ----- HERO SECTION ----- */
 .hero-section {

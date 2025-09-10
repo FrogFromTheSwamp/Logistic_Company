@@ -16,8 +16,25 @@
     <header id="The-Main">
         <div class="container">
             <nav class="nav">
+                <!-- скрытый чекбокс: управляет открытием меню -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+  <!-- кнопка-бургер (label связана с чекбоксом) -->
+                <label for="nav-toggle" class="nav-toggle-label" role="button" aria-label="Открыть/закрыть меню">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+
                 <img src="img/logo.PNG" alt="logo small" class="logo-sm">
-                <ul class="nav-list">
+
+                <ul class="nav-social-icon">
+                    <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
                     <li><a href="#The-Main" class="nav-item">Главная</a></li>
                     <li><a href="#about-us" class="nav-item">О нас</a></li>
                     <li><a href="#services" class="nav-item">Услуги</a></li>
@@ -25,11 +42,7 @@
                     <li><a href="#reviews" class="nav-item">Отзывы</a></li>
                     <li><a href="#contacts" class="nav-item">Контакты</a></li>
                 </ul>
-                <ul class="nav-social-icon">
-                    <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
+                </div>
             </nav>
         </div>
 
@@ -175,7 +188,7 @@
         <div class="container contacts" id="contacts">
             <div class="contact-card">
                 <h4 class="header-section">Связь через мессенджеры</h4>
-                <p class="contact-esse">Для оперативного взаимодействия вы можете связаться с нашей командой через удобный для вас мессенджер.<br> Мы на связи в <span class="big-text">Telegram</span> и <span class="big-text">WhatsApp</span> — готовы предоставить консультацию, уточнить детали и предложить оптимальные решения по логистике.</p>
+                <p class="contact-esse">Для оперативного взаимодействия вы можете связаться с нашей командой через удобный для вас мессенджер.<br> Мы на связи в <span class="big-text">Telegram</span> и <span class="big-text">WhatsApp</span> — готовы предоставить консультацию, уточнить детали и предложить оптимальные решения по логистике</p>
                 <div class="icons-contact"> 
                     <div class="icon-contact">
                         <a href="#"><i class="fa-brands fa-telegram"></i></a>
@@ -190,7 +203,7 @@
 
             <div class="contact-card">
                 <h4 class="header-section">Контактный телефон</h4>
-                <p class="contact-esse">Если вы предпочитаете живое общение — позвоните нам.<br> Наш специалист подробно ответит на ваши вопросы, поможет с расчетом стоимости и подберет наиболее подходящий вариант доставки под ваш запрос.</p>
+                <p class="contact-esse">Если вы предпочитаете живое общение — позвоните нам.<br> Наш специалист подробно ответит на ваши вопросы, поможет с расчетом стоимости и подберет наиболее подходящий вариант доставки под ваш запрос</p>
                 <p class="contact-number big-text">+7 (965) 004-83-66</p>
             </div>
 

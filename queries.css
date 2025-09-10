@@ -42,11 +42,9 @@
     /* 1024 */
 
     html {
-        font-size: 43.75%;
-        /* overflow-x: hidden; */
+        font-size: 41%;
     }
 
-    /* ALL */
     .container {
         width: 90%;
         max-width: 800px;
@@ -56,8 +54,7 @@
     .hero-section {
         margin-top: 18rem;
     }
-    
-    /* STAGES OF WORK */
+
     .container.stages-of-work h5 {
         width: 100%;
         max-width: 800px;
@@ -68,9 +65,8 @@
         max-width: 800px;
     }
 
-
     #secohdary-stages {
-       width: 100%;
+        width: 100%;
         max-width: 800px;
     }
 
@@ -84,6 +80,105 @@
 
     .container {
         max-width: 500px;
+    }
+
+        /* ----- мобильное поведение навигации ----- */
+
+    /* показываем label (бургер) */
+    .nav-toggle-label {
+        display: flex;
+        width: 4.6rem;
+        height: 4.6rem;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        margin: 0;
+        z-index: 1200; /* над меню */
+    }
+
+    /* прячем крестик по умолчанию */
+    .nav-toggle-label .fa-xmark {
+        display: none;
+    }
+
+    /* порядок элементов в навбаре: бургер -> логотип -> соц.иконки */
+    .nav { 
+        justify-content: space-between;
+        padding: .6rem 5rem; }
+
+    /* задаём порядок (только для мобильной версии) */
+    .nav-toggle-label { 
+        order: 1; 
+    }
+
+    .logo-sm { 
+        order: 2; 
+    }
+    .nav-social-icon { 
+        order: 3; 
+    }
+
+    /* меню как блок, выезжающий вниз из-под шапки */
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        overflow: hidden;
+        max-height: 0;                     /* скрыто */
+        transition: max-height .35s ease;  /* плавное открытие */
+        z-index: 1100;
+        border-radius: 0 0 16px 16px;
+
+        box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.15); /* снизу */
+        /* плюс боковые */
+        box-shadow: -4px 4px 6px -4px rgba(0, 0, 0, 0.15),  /* слева */
+            4px 4px 6px -4px rgba(0, 0, 0, 0.15);  /* справа */
+    }
+
+    /* внутри меню — вертикальный список */
+    .nav-menu .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+    }
+
+    /* стиль ссылок в мобильном меню (растянуты на всю ширину) */
+    .nav-menu .nav-list li a {
+        display: block;
+        padding: 1.15rem 1.6rem;
+        font-size: var(--text-h5);
+        border-top: 1px solid rgba(54,89,115,0.06);
+        color: var(--color-blue-dark);
+    }
+
+    /* при наведении/фокусе можно менять цвет */
+    .nav-menu .nav-list li a:hover,
+    .nav-menu .nav-list li a:focus {
+        color: var(--color-blue-mid);
+        background: rgba(0,0,0,0.02);
+    }
+
+    /* --- когда чекбокс отмечен: открываем меню и меняем иконку --- */
+    .nav-toggle:checked + .nav-toggle-label .fa-bars {
+        display: none;            /* прячем полоски */
+    }
+    .nav-toggle:checked + .nav-toggle-label .fa-xmark {
+        display: inline-block;    /* показываем крестик */
+    }
+
+    /* открываем панель меню (подберите max-height под кол-во пунктов) */
+    .nav-toggle:checked ~ .nav-menu {
+        max-height: 40rem; /* достаточно большое значение — меню поместится */
+    }
+    }
+
+    .nav {
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .nav-list {
@@ -153,7 +248,7 @@
     footer .main-footer {
         padding: 5rem;
     }
-}
+
 
 @media (max-width: 38rem) {
     /* 608px */
@@ -196,7 +291,7 @@
 
     .card-services-notes p {
         padding: 1rem;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .special-offer-card {
@@ -206,6 +301,7 @@
     .special-offer-card .special-offer-card-text h5 {
         padding: 0;
         font-size: 2.4rem;
+        word-spacing: 0.5rem;
     }
 
     .special-offer-card-text {
