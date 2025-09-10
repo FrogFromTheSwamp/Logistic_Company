@@ -186,19 +186,26 @@
         border-radius: 25px;
     }
 
+    .container.services h4 {
+        padding: 0;
+    }
+
+    .card-services-notes {
+        gap: 1rem;
+    }
+
     .special-offer-card {
         border-radius: 25px;
     }
 
     .special-offer-card .special-offer-card-text h5 {
-        padding: 0 3rem;
+        padding: 0;
         font-size: 2.4rem;
     }
 
     .special-offer-card-text {
         margin: 5rem;
     }
-
 
     .special-offer-card-text .btn.btn-primary-outline {
         margin-top: 4rem;
@@ -216,6 +223,7 @@
     .container.stages-of-work h5 {
         width: 100%;
         height: auto;
+        padding: 0;
     }
     .container.reviews .card-review {
         padding: 20px;
@@ -224,6 +232,7 @@
     
     .contact-card {
         border-radius: 25px;
+        padding: 2rem;
     }
 
     footer {
@@ -268,7 +277,7 @@
     .container.stages-of-work h5 {
         width: 100%;
         height: auto;
-        padding: 0 12rem;
+        padding: 0;
     }
 
     .container.stages-of-work .stages {
@@ -306,7 +315,7 @@
 
 @media (max-width: 22rem) {
     html {
-        font-size: 32%;
+        font-size: 30%;
     }
 
     .special-offer-card .special-offer-card-text h5 {
