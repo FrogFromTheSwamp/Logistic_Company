@@ -213,6 +213,7 @@
 
     .container.stages-of-work h5 {
         border: 2px solid var(--color-blue-dark);
+        padding: 1rem 0;
     }
 
     .container.stages-of-work .stages {
@@ -318,7 +319,6 @@
     .container.stages-of-work h5 {
         width: 100%;
         height: auto;
-        padding: 0;
     }
 
     .container.reviews .card-review {
@@ -373,7 +373,6 @@
     .container.stages-of-work h5 {
         width: 100%;
         height: auto;
-        padding: 0;
     }
 
     .container.stages-of-work .stages {
