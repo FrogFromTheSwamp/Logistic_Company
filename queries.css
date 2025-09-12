@@ -274,6 +274,7 @@
 
     .card-services.primary {
         border-radius: 25px;
+        margin-bottom: 4rem;
     }
 
     .container.services h4 {
@@ -282,11 +283,17 @@
 
     .card-services-notes {
         justify-content: flex-start;
+        margin: 3rem 2rem 3rem 2rem;
+        gap: 2rem;
     }
 
     .card-services-notes p {
         padding: 1rem;
         font-size: 1.8rem;
+    }
+
+    .card-services.primary .notes-paragraph {
+        margin-bottom: 3rem;
     }
 
     .special-offer-card {
@@ -319,8 +326,9 @@
     .container.stages-of-work h5 {
         width: 100%;
         height: auto;
+        margin-bottom: 1rem;
     }
-
+    
     .container.reviews .card-review {
         padding: 20px;
         border-radius: 25px;
@@ -384,6 +392,16 @@
     #secohdary-stages {
         width: auto;
         padding: 0 12rem;
+    }
+
+
+    .container.reviews .card-review .review-heading {
+        margin-left: 1.5rem;
+        gap: 2rem;
+    }
+
+    .card-review p {
+        padding-top: 0.5rem;
     }
 
     .container.reviews .card-review {
