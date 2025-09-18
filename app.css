@@ -657,41 +657,51 @@ span {
     gap: 3rem
 }
 
-.card-review p {
-    padding: 2rem 1rem;
+.card-review {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  border: 3px solid var(--color-blue-mid);
+  border-radius: 30px;
+  background-color: rgba(149, 204, 231, 0.3);
 }
 
-.container.reviews .card-review {
-    max-width: 1200px;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 233, 146, 0.14);
-    border: 3px solid rgba(111, 94, 44, 0.5);
-    border-radius: 50px;
-    color: var(--color-gold-dark);
-    padding: 45px 20px 40px 45px;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+.card-content {
+  display: flex;
+  flex-wrap: wrap; /* для адаптивности */
+  gap: 2rem;
+  align-items: center;
 }
 
-.container.reviews .card-review .review-heading {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-start;
-    align-items: center;
+.review-text {
+  flex: 1 1 300px; /* растет, сжимается, минимальная ширина */
+  /* color: var(--color-gold-dark); */
 }
 
-.container.reviews .card-review .review-heading i {
-    color: var(--color-gold-dark);
-    font-size: var(--text-h2);
+.review-text p {
+  margin: 0;
+  padding: 1rem;
+  font-size: 2.6rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
-.container.reviews .card-review .review-heading h5 {
-    color: var(--color-gold-dark);
+.review-image {
+  flex: 0 0 550px; /* фиксированная ширина, не растет */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.review-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+
 
 /* ------------------- MAIN (CONTACTS) ------------------- */
 
