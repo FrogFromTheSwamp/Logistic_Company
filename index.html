@@ -9,7 +9,7 @@
     <meta name="description" content="Сайт логистической компании Logistic Dragon. Сопровождение процесса покупки товаров из Китая: начиная от поиска и выкупа и заканчивая тщательной проверкой и организацией доставки в Россию. Такой комплексный подход позволяет клиентам избежать трудностей, связанных с покупкой товаров в Китае."> <!-- SEO -->
     <meta name="keywords" content="Перевозки, карго, транпсортировка, товар, Китай, Вайлдберрис"> <!-- SEO (уже мало используют, но можно) -->
     <meta name="author" content="Logistic Dragon">
-    <link rel="icon" href="img/logo.PNG" type="image/png">
+    <link rel="icon" href="img/logo.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,6 +241,62 @@
                 <p class="contact-esse">Если вы предпочитаете живое общение — позвоните нам.<br> Наш специалист подробно ответит на ваши вопросы, поможет с расчетом стоимости и подберет наиболее подходящий вариант доставки под ваш запрос</p>
                 <p class="contact-number big-text">+7 (993) 485-02-78</p>
                 <p class="contact-number big-text">+7 (993) 985-02-98</p>
+            </div>
+
+            <div class="contact-card">
+                <h4 class="header-section">Форма обратной связи</h4>
+                <p class="contact-esse">Оставьте заявку — менеджер свяжется с вами в течение рабочего дня и ответит на все вопросы</p>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="client-name">Ваше имя</label>
+                            <input type="text" id="client-name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="client-phone">Телефон</label>
+                            <input type="tel" id="client-phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="client-email">Email</label>
+                            <input type="email" id="client-email" name="email" placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-field">
+                            <label for="client-service">Услуга</label>
+                            <select id="client-service" name="service">
+                                <option value="search">Поиск и выкуп товара</option>
+                                <option value="delivery">Доставка товара</option>
+                                <option value="packing">Упаковка товара</option>
+                                <option value="consult">Бесплатная консультация</option>
+                            </select>
+                        </div>
+                    </div>
+                    <fieldset class="form-radio">
+                        <legend>Удобный способ связи</legend>
+                        <div class="radio-option">
+                            <input type="radio" id="contact-telegram" name="contact-method" value="telegram" checked>
+                            <label for="contact-telegram">Telegram</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="contact-whatsapp" name="contact-method" value="whatsapp">
+                            <label for="contact-whatsapp">WhatsApp</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="contact-call" name="contact-method" value="call">
+                            <label for="contact-call">Звонок</label>
+                        </div>
+                    </fieldset>
+                    <div class="form-field">
+                        <label for="client-message">Комментарий к заявке</label>
+                        <textarea id="client-message" name="message" rows="4" placeholder="Опишите товар, объём партии и желаемые сроки доставки"></textarea>
+                    </div>
+                    <div class="form-consent">
+                        <input type="checkbox" id="client-consent" name="consent" required>
+                        <label for="client-consent">Я согласен(а) на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="form-submit">Отправить заявку</button>
+                </form>
             </div>
         </div>
     </main>

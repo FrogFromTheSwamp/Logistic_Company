@@ -363,6 +363,10 @@
     .logo-md {
         width: 25rem;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 28rem) {
